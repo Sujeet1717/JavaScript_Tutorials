@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body style=" background-color: #212121; color: #fff">
+<div class="list">
+    <ul class = "listItems">
+        <li>Red</li>
+        <li>Yellow</li>
+        <li>Green</li>
+    </ul>
+</div>
+</body>
+<script>
+
+ // add the items in list
+ function addItems(Item){
+ const ll = document.createElement("li")
+ ll.appendChild(document.createTextNode(Item))
+ document.querySelector('.listItems').appendChild(ll)
+ }
+  
+  //addItems("Blue")
+</script>
+<script>
+
+function adnew(items){
+
+    const newItem = document.createElement('li')
+    newItem.appendChild(document.createTextNode(items))
+    document.querySelector('.listItems').appendChild(newItem)
+}
+
+//adnew("Black")
+</script>
+
+<script>
+// edit list items 
+// first create the new list item then append that in the parent class. Store the item to be replaced in a varaible. Replace the old with new item
+function editItems(Items){
+const newItem1 = document.createElement('li')
+const olditem = document.querySelector('li:nth-child(2)')
+newItem1.appendChild(document.createTextNode(Items))
+olditem.replaceWith(newItem1)
+}
+//editItems("Gold")
+</script>
+
+<script>
+    // remove the list items
+function removeItem(Item){
+const re = document.querySelector("li")
+re.remove(Item)
+}
+//removeItem("Red")
+
+
+// remove first child
+const first = document.querySelector("li:first-child")
+first.remove()
+
+//remove the last child
+const last = document.querySelector('li:last-child')
+last.remove()
+</script>
+
+<script>
+
+</script>
+</html>

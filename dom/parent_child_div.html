@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element in Dom</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday </div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent.children)               // select all children in parent class
+    // console.log(parent.children[1])   // return the specific div child by index
+    // console.log(parent.children[1].innerHTML)   //  return the specific div child inner HTML Value by index
+    
+    // for loop to iterate over all the child dav in parent class div
+    for (let index = 0; index < parent.children.length; index++) {
+        console.log(parent.children[index].innerHTML)
+        
+    }
+
+    parent.children[1].style.color = "Blue"    // styple the child div value
+    // console.log(parent.firstElementChild)      // return the first child
+    // console.log(parent.lastElementChild)      // return the first child
+
+    const dayOne = document.querySelector(".day")
+    console.log(dayOne.parentElement)                  // return parent div class
+    console.log(dayOne.nextElementSibling.innerHTML)   // return next child sibiling
+
+    console.log(parent.childNodes)                     // return the node structure of the DOM
+
+</script>
+</html>
