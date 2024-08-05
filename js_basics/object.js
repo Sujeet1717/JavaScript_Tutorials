@@ -95,9 +95,21 @@ console.log(obj5);
 const {id} = obj          // o here is the object of which is depcreated
 console.log(id);        // instead of using obj.id mutiple times now we can direct use id key
 
+// Create an Object
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50
+  };
+  
+  // Destructuring - instead of using the person.firtsName and Obj.lastName we can destructre their keys 
+  let {firstName, lastName, country = "US"} = person;
+  console.log("The person name is "+ firstName ,lastName+" lives in "+country);
 
+  // Destructuring- name is variable name for lastName 
+let {lastName : name} = person;
 
-
+console.log(name);
 
 
 
